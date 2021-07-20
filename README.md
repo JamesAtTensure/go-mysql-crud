@@ -31,23 +31,20 @@ Sample crud operation using Golang and MySql
 - Response: `204`
 
 ## Required Packages
-- Dependency management
-    * [dep](https://github.com/golang/dep)
 - Database
     * [MySql](https://github.com/go-sql-driver/mysql)
 - Routing
     * [chi](https://github.com/go-chi/chi)
 
 ## Quick Run Project
-First clone the repo then go to go-mysql-crud folder. After that build your image and run by docker. Make sure you have docker in your machine. 
+First clone the repo then go to go-mysql-crud folder. After that build your image and run by docker. Make sure you have docker on your machine. 
 
 ```
-git clone https://github.com/s1s1ty/go-mysql-crud.git
+git clone https://github.com/jamesattensure/go-mysql-crud.git
 
 cd go-mysql-crud
 
-chmod +x run.sh
-./run.sh
+docker-compose build
 
 docker-compose up
 ```
