@@ -1,0 +1,162 @@
+_type: export
+__export_format: 4
+__export_date: 2021-07-20T18:23:10.969Z
+__export_source: insomnia.desktop.app:v2021.3.0
+resources:
+  - _id: req_07fd13eca559454b8c2fd8f133e56762
+    parentId: wrk_4184eb7b6ba94cdb89d2f7e82fd569a7
+    modified: 1626805324053
+    created: 1626805313158
+    url: http://localhost:8005/posts/1
+    name: Delete Post
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1626805313158
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_4184eb7b6ba94cdb89d2f7e82fd569a7
+    parentId: null
+    modified: 1626804040709
+    created: 1626804040709
+    name: go-mysql-crud
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_44cc0d303d7849c1993cfa8993fa0041
+    parentId: wrk_4184eb7b6ba94cdb89d2f7e82fd569a7
+    modified: 1626805293189
+    created: 1626805236983
+    url: http://localhost:8005/posts/1
+    name: Update Post
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "My Changed Title",
+        	"Content": "My changed Content\nEven More Wow"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_66d1cbe07d5240fe99f9b0769cbc6aa4
+    authentication: {}
+    metaSortKey: -1626805236983
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a2c055c006d442369d2fd7487c8486b0
+    parentId: wrk_4184eb7b6ba94cdb89d2f7e82fd569a7
+    modified: 1626805197356
+    created: 1626805175406
+    url: http://localhost:8005/posts/1
+    name: Get Post Details
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1626805175406
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_87f0e077274a4b07809f011e55c765ce
+    parentId: wrk_4184eb7b6ba94cdb89d2f7e82fd569a7
+    modified: 1626804287563
+    created: 1626804272492
+    url: http://localhost:8005/posts
+    name: Get Posts
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1626804272492
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_23ba5a954fd0484d8c06901053b02e91
+    parentId: wrk_4184eb7b6ba94cdb89d2f7e82fd569a7
+    modified: 1626804359513
+    created: 1626804063502
+    url: http://localhost:8005/posts/
+    name: Create Post
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "My First Post",
+        	"content": "Lost of stuff/nLook at all this content/nMuch WOW"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6efbece6f92c4d7db457389f6f30e3fd
+    authentication: {}
+    metaSortKey: -1626804063502
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_2e79f7dd5aa8a3495cdbf0c5c4c4f073ce424d06
+    parentId: wrk_4184eb7b6ba94cdb89d2f7e82fd569a7
+    modified: 1626804040801
+    created: 1626804040801
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1626804040801
+    _type: environment
+  - _id: jar_2e79f7dd5aa8a3495cdbf0c5c4c4f073ce424d06
+    parentId: wrk_4184eb7b6ba94cdb89d2f7e82fd569a7
+    modified: 1626804040803
+    created: 1626804040803
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_64daf20746244d51bdd925d68352ceb3
+    parentId: wrk_4184eb7b6ba94cdb89d2f7e82fd569a7
+    modified: 1626804040712
+    created: 1626804040712
+    fileName: go-mysql-crud
+    contents: ""
+    contentType: yaml
+    _type: api_spec
