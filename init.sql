@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS go_mysql_crud;
+USE go_mysql_crud;
+CREATE TABLE IF NOT EXISTS posts(
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    content VARCHAR(255) NOT NULL,
+    PRIMARY KEY ( id )
+);
