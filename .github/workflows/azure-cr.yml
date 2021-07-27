@@ -1,11 +1,25 @@
-- uses: azure/docker-login@v1
-  with:
-    login-server: tensuredemoapp.azurecr.io
-    username: ${{ secrets.REGISTRY_USERNAME }}
-    password: ${{ secrets.REGISTRY_PASSWORD }}
+---
+name: Azure build and push
 
-- run: |
-    docker build . -t tensuredemoapp.azurecr.io/web:${{ github.sha }}
-    docker tag tensuredemoapp.azurecr.io/web:${{ github.sha }} tensuredemoapp.azurecr.io/web:latest
-    docker push tensuredemoapp.azurecr.io/web:${{ github.sha }}
-    docker push tensuredemoapp.azurecr.io/web:latest
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-and-push:  
+    name: Build and Push 
+    runs-on: ubuntu-latest  
+    steps:
+      - uses: azure/docker-login@v1
+        with:
+          login-server: tensuredemoapp.azurecr.io
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - run: |
+          docker build . -t tensuredemoapp.azurecr.io/web:${{ github.sha }}
+          docker tag tensuredemoapp.azurecr.io/web:${{ github.sha }} tensuredemoapp.azurecr.io/web:latest
+          docker push tensuredemoapp.azurecr.io/web:${{ github.sha }}
+          docker push tensuredemoapp.azurecr.io/web:latest
