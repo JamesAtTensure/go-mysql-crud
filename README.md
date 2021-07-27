@@ -49,3 +49,12 @@ docker-compose build
 docker-compose up
 ```
 
+## Kubectl commands
+```
+kubectl apply -f mysql-pvc-0.yaml
+kubectl apply -f mysql-pvc-1.yaml
+kubectl apply -f mysql-deployment.yaml
+kubectl apply -f mysql-service.yaml
+kubectl apply -f web-deployment.yaml
+kubectl apply -f web-service.yaml
+```
