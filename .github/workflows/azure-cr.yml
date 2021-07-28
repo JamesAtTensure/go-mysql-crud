@@ -16,12 +16,12 @@ jobs:
     
       - uses: azure/docker-login@v1
         with:
-          login-server: tensuredemoapp.azurecr.io
+          login-server: tensurecontainerregistry.azurecr.io
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
       - run: |
-          docker build . -t tensuredemoapp.azurecr.io/web:${{ github.sha }}
-          docker tag tensuredemoapp.azurecr.io/web:${{ github.sha }} tensuredemoapp.azurecr.io/web:latest
-          docker push tensuredemoapp.azurecr.io/web:${{ github.sha }}
-          docker push tensuredemoapp.azurecr.io/web:latest
+          docker build . -t tensurecontainerregistry.azurecr.io/web:${{ github.sha }}
+          docker tag tensurecontainerregistry.azurecr.io/web:${{ github.sha }} tensurecontainerregistry.azurecr.io/web:latest
+          docker push tensurecontainerregistry.azurecr.io/web:${{ github.sha }}
+          docker push tensurecontainerregistry.azurecr.io/web:latest
