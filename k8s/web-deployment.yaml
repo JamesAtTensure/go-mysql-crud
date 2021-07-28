@@ -31,7 +31,7 @@ spec:
               value: really-bad-idea
             - name: DB_PORT
               value: "3306"
-          image: tensuredemoapp.azurecr.io/web:latest
+          image: tensurecontainerregistry.azurecr.io/web:latest
           name: web
           ports:
             - containerPort: 8005
