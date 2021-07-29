@@ -14,6 +14,7 @@ import (
 func main() {
     dbUser := os.Getenv("DB_USER")
 	dbName := os.Getenv("DB_NAME")
+	dbUser := os.Getenv("DB_USER")
 	dbPass := os.Getenv("DB_PASS")
 	dbHost := os.Getenv("DB_HOST")
 	dbPort := os.Getenv("DB_PORT")
