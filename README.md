@@ -58,3 +58,7 @@ kubectl apply -f mysql-service.yaml
 kubectl apply -f web-deployment.yaml
 kubectl apply -f web-service.yaml
 ```
+
+```
+kubectl port-forward deployment/web 8005:8005
+```
