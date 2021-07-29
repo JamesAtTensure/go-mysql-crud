@@ -24,11 +24,16 @@ spec:
       containers:
         - env:
             - name: DB_HOST
-              value: mysql
+              value: demo-app-db.mysql.database.azure.com
             - name: DB_NAME
               value: go_mysql_crud
+            - name: DB_USER
+              value: db@demo-app-db
             - name: DB_PASS
-              value: really-bad-idea
+              valueFrom:
+                secretKeyRef:
+                  name: go-mysql-crud
+                  key: dbPassword
             - name: DB_PORT
               value: "3306"
           image: tensurecontainerregistry.azurecr.io/web:latest
