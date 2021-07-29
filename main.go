@@ -8,16 +8,17 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"github.com/s1s1ty/go-mysql-crud/driver"
-	ph "github.com/s1s1ty/go-mysql-crud/handler/http"
+	"github.com/s1s1ty/go-mysql-crud/handler/http"
 )
 
 func main() {
+    dbUser := os.Getenv("DB_USER")
 	dbName := os.Getenv("DB_NAME")
 	dbPass := os.Getenv("DB_PASS")
 	dbHost := os.Getenv("DB_HOST")
 	dbPort := os.Getenv("DB_PORT")
 
-	connection, err := driver.ConnectSQL(dbHost, dbPort, "root", dbPass, dbName)
+	connection, err := driver.ConnectSQL(dbHost, dbPort, dbUser, dbPass, dbName)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(-1)
