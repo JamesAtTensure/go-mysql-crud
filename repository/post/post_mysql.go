@@ -4,8 +4,8 @@ import (
 	"context"
 	"database/sql"
 
-	models "github.com/s1s1ty/go-mysql-crud/models"
-	pRepo "github.com/s1s1ty/go-mysql-crud/repository"
+	models "github.com/jamesattensure/go-mysql-crud/models"
+	pRepo "github.com/jamesattensure/go-mysql-crud/repository"
 )
 
 // NewSQLPostRepo retunrs implement of post repository interface

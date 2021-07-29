@@ -9,9 +9,11 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/jamesattensure/go-mysql-crud/driver"
 	ph "github.com/jamesattensure/go-mysql-crud/handler/http"
+	"github.com/jamesattensure/go-mysql-crud/health"
 )
 
 func main() {
+	handler := health.HealthChecker()
 	dbUser := os.Getenv("DB_USER")
 	dbName := os.Getenv("DB_NAME")
 	dbPass := os.Getenv("DB_PASS")
@@ -31,6 +33,7 @@ func main() {
 	pHandler := ph.NewPostHandler(connection)
 	r.Route("/", func(rt chi.Router) {
 		rt.Mount("/posts", postRouter(pHandler))
+		rt.Mount("/health", handler)
 	})
 	fmt.Println("Server listen at :8005")
 	http.ListenAndServe(":8005", r)
