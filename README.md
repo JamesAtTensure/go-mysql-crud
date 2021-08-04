@@ -50,11 +50,14 @@ docker-compose up
 ```
 
 ## Kubectl commands
-```
-kubectl apply -f web-deployment.yaml
-kubectl apply -f web-service.yaml
+```shell
+kubectl apply -f ./k8s
 ```
 
+```shell
+kubectl scale deployment/web --replicas=5
 ```
+
+```shell
 kubectl port-forward deployment/web 8005:8005
 ```
